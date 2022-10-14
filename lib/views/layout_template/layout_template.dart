@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio2022/locator.dart';
-import 'package:portfolio2022/router/route_names.dart';
-import 'package:portfolio2022/router/router.dart';
+import 'package:portfolio2022/routes/route_names.dart';
+import 'package:portfolio2022/routes/router.dart';
 import 'package:portfolio2022/services/navigation_service.dart';
 import 'package:portfolio2022/widgets/centered_view/centered_view.dart';
 import 'package:portfolio2022/widgets/nav_bar/nav_bar.dart';
