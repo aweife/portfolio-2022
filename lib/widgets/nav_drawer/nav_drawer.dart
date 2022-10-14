@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio2022/router/route_names.dart';
 import 'package:portfolio2022/widgets/nav_drawer/nav_drawer_header.dart';
 import 'package:portfolio2022/widgets/nav_drawer/nav_drawer_item.dart';
 
@@ -21,8 +22,18 @@ class NavDrawer extends StatelessWidget {
       child: Column(
         children: const <Widget>[
           NavDrawerHeader(),
-          NavDrawerItem(title: "Projects", icon: Icons.assignment),
-          NavDrawerItem(title: "About", icon: Icons.help),
+          // TODO: Combine the UI for this widget with the NavBarItem and
+          // make it responsive
+          NavDrawerItem(
+            title: "Projects",
+            icon: Icons.assignment,
+            navPath: projectsRoute,
+          ),
+          NavDrawerItem(
+            title: "About",
+            icon: Icons.help,
+            navPath: aboutRoute,
+          ),
         ],
       ),
     );
