@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio2022/models/page_details_model.dart';
 import 'package:portfolio2022/styles/text_styles.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-class ProjectHeaderDesktop extends StatelessWidget {
-  const ProjectHeaderDesktop({super.key});
+class PageHeaderDesktop extends StatelessWidget {
+  final PageDetailsModel details;
+
+  const PageHeaderDesktop({super.key, required this.details});
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +16,13 @@ class ProjectHeaderDesktop extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Text(
-            "PROJECTS",
+            details.title,
             style: titleTextStyle(sizingInformation.deviceScreenType),
           ),
           const SizedBox(width: 50),
           Expanded(
             child: Text(
-              "Here are some of my projects I have done in school",
+              details.description,
               style: descriptionTextStyle(sizingInformation.deviceScreenType),
             ),
           )

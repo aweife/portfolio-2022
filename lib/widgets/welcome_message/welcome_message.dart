@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio2022/styles/text_styles.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class WelcomeMessage extends StatelessWidget {
@@ -12,14 +13,6 @@ class WelcomeMessage extends StatelessWidget {
             sizingInformation.deviceScreenType == DeviceScreenType.desktop
                 ? TextAlign.left
                 : TextAlign.center;
-        double titleSize =
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                ? 45
-                : 60;
-        double descSize =
-            sizingInformation.deviceScreenType == DeviceScreenType.mobile
-                ? 15
-                : 20;
 
         return SizedBox(
           width: 600,
@@ -29,11 +22,7 @@ class WelcomeMessage extends StatelessWidget {
             children: <Widget>[
               Text(
                 "HI, MY NAME IS\nANG WEI FENG TED",
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  height: 0.9,
-                  fontSize: titleSize,
-                ),
+                style: titleTextStyle(sizingInformation.deviceScreenType),
                 textAlign: textAlignment,
               ),
               const SizedBox(height: 30),
@@ -41,18 +30,13 @@ class WelcomeMessage extends StatelessWidget {
                 text: TextSpan(
                   text:
                       "I'm a software engineer specializing in full-stack applications. Currently, I'm focused on building both frontend and backend services over at the blockchain team at ",
-                  style: TextStyle(
-                    height: 1.7,
-                    fontSize: descSize,
-                  ),
+                  style:
+                      descriptionTextStyle(sizingInformation.deviceScreenType),
                   children: <TextSpan>[
                     TextSpan(
                       text: "DBS Bank.",
-                      style: TextStyle(
-                        height: 1.7,
-                        fontSize: descSize,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: descriptionTextStyle(
+                          sizingInformation.deviceScreenType),
                     )
                   ],
                 ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio2022/routes/route_names.dart';
-import 'package:portfolio2022/widgets/nav_bar/nav_bar_item.dart';
+import 'package:portfolio2022/widgets/nav_bar_item/nav_bar_item.dart';
 import 'package:portfolio2022/widgets/nav_bar/nav_bar_logo.dart';
 
 class NavBarTabletDesktop extends StatelessWidget {
@@ -19,12 +19,12 @@ class NavBarTabletDesktop extends StatelessWidget {
             children: const <Widget>[
               NavBarItem(
                 title: "Projects",
-                navPath: projectsRoute,
+                navigationPath: projectsRoute,
               ),
               SizedBox(width: 60),
               NavBarItem(
                 title: "About",
-                navPath: aboutRoute,
+                navigationPath: aboutRoute,
               ),
             ],
           )

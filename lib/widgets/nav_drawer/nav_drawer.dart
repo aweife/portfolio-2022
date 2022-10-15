@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio2022/routes/route_names.dart';
+import 'package:portfolio2022/widgets/nav_bar_item/nav_bar_item.dart';
 import 'package:portfolio2022/widgets/nav_drawer/nav_drawer_header.dart';
-import 'package:portfolio2022/widgets/nav_drawer/nav_drawer_item.dart';
 
 class NavDrawer extends StatelessWidget {
   const NavDrawer({super.key});
@@ -22,17 +22,17 @@ class NavDrawer extends StatelessWidget {
       child: Column(
         children: const <Widget>[
           NavDrawerHeader(),
-          // TODO: Combine the UI for this widget with the NavBarItem and
-          // make it responsive
-          NavDrawerItem(
+          // DONE: Combine the UI for this widget with the NavBarItem and make it responsive
+          // The UI for the current DrawerItem shows when it's in mobile, else it shows the NavBarItem ui.
+          NavBarItem(
             title: "Projects",
-            icon: Icons.assignment,
-            navPath: projectsRoute,
+            navigationPath: projectsRoute,
+            iconData: Icons.assignment,
           ),
-          NavDrawerItem(
+          NavBarItem(
             title: "About",
-            icon: Icons.help,
-            navPath: aboutRoute,
+            navigationPath: aboutRoute,
+            iconData: Icons.help,
           ),
         ],
       ),

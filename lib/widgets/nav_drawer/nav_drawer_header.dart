@@ -24,7 +24,7 @@ class NavDrawerHeader extends StatelessWidget {
           Text(
             "No problem!",
             style: TextStyle(color: Colors.white),
-          )
+          ),
         ],
       ),
     );

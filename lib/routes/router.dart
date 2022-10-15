@@ -24,6 +24,7 @@ PageRoute _getPageRoute(Widget child, RouteSettings settings) {
 class _FadeRoute extends PageRouteBuilder {
   final Widget child;
   final String? routeName;
+
   _FadeRoute({required this.child, this.routeName})
       : super(
           settings: RouteSettings(name: routeName),
