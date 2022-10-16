@@ -1,8 +1,8 @@
-class PageDetailsModel {
+class PageHeaderItemModel {
   final String title;
   final String description;
 
-  PageDetailsModel({
+  PageHeaderItemModel({
     required this.title,
     required this.description,
   });

@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio2022/models/nav_bar_item_model.dart';
+import 'package:portfolio2022/models/data/nav_bar_item_model.dart';
+import 'package:stacked/stacked.dart';
 
-class NavBarItemMobile extends StatelessWidget {
-  final NavBarItemModel model;
-
-  const NavBarItemMobile({super.key, required this.model});
+class NavBarItemMobile extends ViewModelWidget<NavBarItemModel> {
+  const NavBarItemMobile({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, NavBarItemModel viewModel) {
     return Padding(
       padding: const EdgeInsets.only(left: 30, top: 60),
       child: Row(
         children: <Widget>[
-          Icon(model.iconData),
+          Icon(viewModel.iconData),
           const SizedBox(width: 30),
           Text(
-            model.title,
+            viewModel.title,
             style: const TextStyle(fontSize: 18),
           )
         ],

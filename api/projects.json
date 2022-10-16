@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Rapid Ride Fight!",
+        "caption": "3D capture-the-flag, multiplayer boat fighting, with smart AI and water graphics",
+        "imageUrl": "assets/logo.png"
+    },
+    {
+        "title": "Glowing Under",
+        "caption": "2D platformer with a focus on puzzle-solving, no-death exploration and storytelling",
+        "imageUrl": "assets/logo.png"
+    },
+    {
+        "title": "BeatBox",
+        "caption": "2D bullet hell game played in the terminal console that uses music to sync movements",
+        "imageUrl": "assets/logo.png"
+    }
+]

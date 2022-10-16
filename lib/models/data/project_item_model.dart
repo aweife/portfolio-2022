@@ -9,8 +9,8 @@ class ProjectItemModel {
     required this.imageUrl,
   });
 
-  // ProjectItemModel.fromJson(Map<String, dynamic> map)
-  //     : title = map['title'],
-  //       duration = map['duration'],
-  //       imageUrl = map['imageUrl'];
+  ProjectItemModel.fromJson(Map<String, dynamic> map)
+      : title = map['title'],
+        caption = map['caption'],
+        imageUrl = map['imageUrl'];
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio2022/models/project_item_model.dart';
+import 'package:portfolio2022/models/data/project_item_model.dart';
 
 class ProjectItem extends StatelessWidget {
   final ProjectItemModel model;
