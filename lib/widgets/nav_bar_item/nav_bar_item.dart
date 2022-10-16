@@ -6,7 +6,7 @@ import 'package:portfolio2022/widgets/nav_bar_item/nav_bar_item_mobile.dart';
 import 'package:portfolio2022/widgets/nav_bar_item/nav_bar_item_tablet_desktop.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:portfolio2022/extensions/hover_extension.dart';
+import 'package:portfolio2022/extensions/hover_extensions.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
