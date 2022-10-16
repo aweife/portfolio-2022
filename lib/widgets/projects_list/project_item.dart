@@ -20,7 +20,7 @@ class ProjectItem extends StatelessWidget {
             SizedBox(
               height: 180,
               child: Image.asset(
-                model.imageUrl,
+                model.imageUrl!,
                 fit: BoxFit.cover,
               ),
             ),
@@ -41,7 +41,7 @@ class ProjectItem extends StatelessWidget {
                     softWrap: true,
                   ),
                   Text(
-                    model.caption,
+                    model.caption!,
                     style: const TextStyle(fontSize: 10),
                   )
                 ],

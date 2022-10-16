@@ -5,11 +5,11 @@ import 'package:portfolio2022/models/data/project_item_model.dart';
 
 class ApiService {
   static const String _baseUrl = "127.0.0.1:5500";
-  static const String _path = "api/projects.json";
 
   Future<dynamic> getProjects() async {
-    final fullUrl = Uri.http(_baseUrl, _path);
-    var response = await http.get(fullUrl);
+    final url = Uri.http(_baseUrl, "api/projects.json");
+
+    var response = await http.get(url);
 
     if (response.statusCode == 200) {
       var projects = (json.decode(response.body) as List)
@@ -21,5 +21,23 @@ class ApiService {
 
     // Response is not ok
     return "Could not fetch the projects data at this time.";
+  }
+
+  Future<dynamic> getProject(int? id) async {
+    final url = Uri.http(_baseUrl, "api/project", {"id": "$id"});
+
+    var response = await http.get(url);
+
+    // print(
+    //     "getEpisode | response: ${response.body} statusCode: ${response.statusCode}");
+
+    if (response.statusCode == 200) {
+      var project = ProjectItemModel.fromJson(json.decode(response.body));
+
+      return project;
+    }
+
+    // Response is not ok
+    return "Could not fetch project $id. Are you sure it exists?";
   }
 }
