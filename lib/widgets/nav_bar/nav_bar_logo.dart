@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio2022/extensions/hover_extension.dart';
 
 class NavBarLogo extends StatelessWidget {
   const NavBarLogo({super.key});
@@ -9,6 +10,6 @@ class NavBarLogo extends StatelessWidget {
       height: 80,
       width: 150,
       child: Image.asset("assets/logo.png"),
-    );
+    ).showClickOnHover;
   }
 }

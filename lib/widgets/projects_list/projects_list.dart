@@ -13,7 +13,7 @@ class ProjectsList extends StatelessWidget {
       spacing: 30,
       runSpacing: 30,
       children: <Widget>[
-        ...projects!.map(
+        ...?projects?.map(
           (project) => ProjectItem(model: project),
         )
       ],
